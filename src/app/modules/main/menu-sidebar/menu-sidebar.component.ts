@@ -39,23 +39,40 @@ export const MENU = [
         path: ['/']
     },
     {
-        name: 'Blank',
-        iconClasses: 'fas fa-file',
-        path: ['/blank']
+        name: 'Oportunidades',
+        iconClasses: 'fas fa-bullhorn',
+        children: [
+          {
+              name: 'Arbitragem',
+              iconClasses: 'fas fa-stack-exchange',
+              path: ['/arbitragem']
+          },
+          {
+            name: 'trio',
+            iconClasses: 'fas fa-stack-exchange',
+            path: ['/arbitragem2']
+        }
+        ]
     },
+
     {
-        name: 'Main Menu',
-        iconClasses: 'fas fa-folder',
+        name: 'Configurações',
+        iconClasses: 'fas fa-plus',
         children: [
             {
-                name: 'Sub Menu',
-                iconClasses: 'far fa-address-book',
-                path: ['/sub-menu-1']
+                name: 'APIs',
+                iconClasses: 'fas fa-server',
+                path: ['/APIs']
             },
             {
                 name: 'Blank',
                 iconClasses: 'fas fa-file',
                 path: ['/sub-menu-2']
+            },
+            {
+                name: 'Config',
+                iconClasses: 'fas fa-wrench',
+                path: ['/config']
             }
         ]
     }

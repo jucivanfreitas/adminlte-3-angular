@@ -11,6 +11,8 @@ import {NonAuthGuard} from '@guards/non-auth.guard';
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
+import { ConfigurationComponent } from '@pages/configuration/configuration.component';
+import { ArbitragemComponent } from '@pages/arbitragem/arbitragem.component';
 
 const routes: Routes = [
     {
@@ -24,11 +26,11 @@ const routes: Routes = [
                 component: ProfileComponent
             },
             {
-                path: 'blank',
+                path: 'Oportunidades',
                 component: BlankComponent
             },
             {
-                path: 'sub-menu-1',
+                path: 'APIs',
                 component: SubMenuComponent
             },
             {
@@ -38,6 +40,14 @@ const routes: Routes = [
             {
                 path: '',
                 component: DashboardComponent
+            },
+            {
+                path: 'config',
+                component: ConfigurationComponent
+            },
+            {
+                path: 'arbitragem',
+                component: ArbitragemComponent
             }
         ]
     },

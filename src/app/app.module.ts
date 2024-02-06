@@ -34,8 +34,10 @@ import {authReducer} from './store/auth/reducer';
 import {uiReducer} from './store/ui/reducer';
 import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
+import { ConfigurationComponent } from '@pages/configuration/configuration.component';
+import { ArbitragemComponent } from '@pages/arbitragem/arbitragem.component';
 
-registerLocaleData(localeEn, 'en-EN');
+registerLocaleData(localeEn, 'pr-br');
 
 @NgModule({
     declarations: [
@@ -59,7 +61,12 @@ registerLocaleData(localeEn, 'en-EN');
         SubMenuComponent,
         MenuItemComponent,
         ControlSidebarComponent,
-        SidebarSearchComponent
+        SidebarSearchComponent,
+        ConfigurationComponent,
+        ArbitragemComponent,
+
+
+
     ],
     imports: [
         ProfabricComponentsModule,
@@ -68,7 +75,9 @@ registerLocaleData(localeEn, 'en-EN');
         StoreModule.forRoot({auth: authReducer, ui: uiReducer}),
         HttpClientModule,
         AppRoutingModule,
+
         ReactiveFormsModule,
+
         BrowserAnimationsModule,
         ToastrModule.forRoot({
             timeOut: 3000,
