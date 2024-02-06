@@ -1,5 +1,7 @@
 {
     "name": "appdatavisio",
+    "appname": "App Cripto Datavisio",
+    "apprights": "Dev Datavisio",
     "version": "0.3.0",
     "private": true,
     "type": "module",

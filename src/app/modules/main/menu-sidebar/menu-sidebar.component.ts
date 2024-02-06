@@ -4,6 +4,7 @@ import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {AppService} from '@services/app.service';
 import {Observable} from 'rxjs';
+import packageInfo from './../../../../../package.json';
 
 const BASE_CLASSES = 'main-sidebar elevation-4';
 @Component({
@@ -16,6 +17,8 @@ export class MenuSidebarComponent implements OnInit {
     public ui: Observable<UiState>;
     public user;
     public menu = MENU;
+    public appname = packageInfo.appname;
+    public apprights = packageInfo.apprights;
 
     constructor(
         public appService: AppService,
