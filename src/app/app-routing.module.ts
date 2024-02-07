@@ -13,6 +13,8 @@ import {RecoverPasswordComponent} from '@modules/recover-password/recover-passwo
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
 import { ConfigurationComponent } from '@pages/configuration/configuration.component';
 import { ArbitragemComponent } from '@pages/arbitragem/arbitragem.component';
+import { APIsComponent } from '@modules/apis/apis.component';
+
 
 const routes: Routes = [
     {
@@ -31,7 +33,7 @@ const routes: Routes = [
             },
             {
                 path: 'APIs',
-                component: SubMenuComponent
+                component: APIsComponent
             },
             {
                 path: 'sub-menu-2',

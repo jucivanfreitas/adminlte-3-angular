@@ -40,6 +40,27 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+1 -acessar o diretorio onde o nomvo componente vai ser instalado:
+cd exemplo/
+2 inseriro o comando `ng generate component component-name`
+apagar as referencias criadas no arquivo component-name.component.ts :
+" standalone: true,
+imports: [],"
+
+![alt text](image.png)
+
+3- importar em module o componente e em declaretions;
+import { APIsComponent } from '@modules/apis/apis.component';
+APIsComponent,
+
+4- importa em app routing
+5 criar rota em routes:
+{
+path: 'APIs',
+component: APIsComponent
+},
+6- está pronto para ser utilizado nos menus
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.

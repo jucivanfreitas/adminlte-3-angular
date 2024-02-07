@@ -36,6 +36,7 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import { ConfigurationComponent } from '@pages/configuration/configuration.component';
 import { ArbitragemComponent } from '@pages/arbitragem/arbitragem.component';
+import { APIsComponent } from '@modules/apis/apis.component';
 
 registerLocaleData(localeEn, 'pr-br');
 
@@ -64,6 +65,7 @@ registerLocaleData(localeEn, 'pr-br');
         SidebarSearchComponent,
         ConfigurationComponent,
         ArbitragemComponent,
+        APIsComponent,
 
 
 
