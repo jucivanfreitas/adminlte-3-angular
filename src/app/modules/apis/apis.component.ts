@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './apis.component.html',
   styleUrls: [
     './apis.component.scss',
-    '../../static/assets/plugins/jsgrid/jsgrid-theme.min.css',
-    '../../static/assets/plugins/jsgrid/jsgrid.min.css'
+
   ],
 
 
