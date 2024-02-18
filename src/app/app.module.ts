@@ -37,6 +37,8 @@ import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search
 import { ConfigurationComponent } from '@pages/configuration/configuration.component';
 import { ArbitragemComponent } from '@pages/arbitragem/arbitragem.component';
 import { APIsComponent } from '@modules/apis/apis.component';
+import { FormsModule } from '@angular/forms';
+
 
 registerLocaleData(localeEn, 'pr-br');
 
@@ -59,6 +61,7 @@ registerLocaleData(localeEn, 'pr-br');
         RecoverPasswordComponent,
         LanguageComponent,
         MainMenuComponent,
+
         SubMenuComponent,
         MenuItemComponent,
         ControlSidebarComponent,
@@ -66,6 +69,7 @@ registerLocaleData(localeEn, 'pr-br');
         ConfigurationComponent,
         ArbitragemComponent,
         APIsComponent,
+
 
 
 
@@ -77,7 +81,7 @@ registerLocaleData(localeEn, 'pr-br');
         StoreModule.forRoot({auth: authReducer, ui: uiReducer}),
         HttpClientModule,
         AppRoutingModule,
-
+        FormsModule,
         ReactiveFormsModule,
 
         BrowserAnimationsModule,

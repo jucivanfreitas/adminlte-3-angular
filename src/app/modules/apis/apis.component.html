@@ -18,30 +18,30 @@
   </div>
   <!-- /.container-fluid -->
 </section>
-<Section class="content" >
+<hr>
+<hr>
+<!-- Formulário de cadastro -->
+<section class="content">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-md-8"> <!-- Definindo a largura do card -->
-        <!-- general form elements disabled -->
+      <div class="col-md-6">
         <div class="card card-warning">
           <div class="card-header">
             <h3 class="card-title">Cadastrar APIs</h3>
           </div>
-          <!-- /.card-header -->
           <div class="card-body">
-            <form>
+            <form (submit)="onSubmit()" [(ngModel)]="formData" name="apiForm">
               <div class="row">
                 <div class="col-sm-6">
-                  <!-- text input -->
                   <div class="form-group">
                     <label>Exchenge</label>
-                    <input type="text" class="form-control" placeholder="Binace, Kucoin, Bitfinex ...">
+                    <input name="exchange" type="text" class="form-control" [(ngModel)]="formData.exchange" placeholder="Binace, Kucoin, Bitfinex ...">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Tipo de API</label>
-                    <select class="form-control">
+                    <select name="apiType" class="form-control" [(ngModel)]="formData.apiType">
                       <option>Preço</option>
                       <option>Pares</option>
                       <option>fee</option>
@@ -55,60 +55,99 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Base API</label>
-                    <input type="text" class="form-control" placeholder="www.api.com/v1/ ..." >
+                    <input name="baseAPI" type="text" class="form-control" [(ngModel)]="formData.baseAPI" placeholder="www.api.com/v1/ ..." >
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>End Point</label>
-                    <input type="text" class="form-control" placeholder="/ticker/usdt/btc ..." >
+                    <input name="endPoint" type="text" class="form-control" [(ngModel)]="formData.endPoint" placeholder="/ticker/usdt/btc ..." >
                   </div>
                 </div>
               </div>
-
-
-
               <div class="row">
                 <div class="col-sm-6">
-
                 </div>
                 <div class="col-sm-6">
-                  <!-- radio -->
                   <div class="form-group">
-
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" >
+                      <input name="inUse" class="form-check-input" [(ngModel)]="formData.inUse" type="radio">
                       <label class="form-check-label">Em uso?</label>
                     </div>
                   </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group">
+                  <div >
+                    <input name="date"  [(ngModel)]="formData.date" type="date">
+                    {{ formData.data | date:'dd/MM/yyyy' }}
+                  </div>
                 </div>
               </div>
-              <!-- Botão de Submissão -->
+            </div>
+              </div>
               <div class="row">
                 <div class="col-sm-12 text-center">
                   <button type="submit" class="btn btn-primary">Submeter</button>
                 </div>
               </div>
-
-
-
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tabela para exibir APIs -->
+
+<hr>
+<hr>
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">APIs Cadastradas</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table name="example2" class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Exchenge</th>
+                <th>Tipo de API</th>
+                <th>Url Base APIs</th>
+                <th>Url End Points</th>
+                <th>Em uso?</th>
+                <th>Data</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let api of apis">
+                  <td>{{ api.exchange }}</td>
+                  <td>{{ api.apiType }}</td>
+                  <td>{{ api.baseAPI }}</td>
+                  <td>{{ api.endPoint }}</td>
+                  <td>{{ api.inUse ? 'Sim' : 'Não' }}</td>
+                  <td>{{ api.date }}</td>
+                  <!-- Adicione outras colunas conforme necessário -->
+
+              </tbody>
+
+            </table>
           </div>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-        <!-- general form elements disabled -->
 
-            </div>
-          </div>
       </div>
-
-      <section class="content1">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                </div>
-
-            </div>
-        </div>
-    </section>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
